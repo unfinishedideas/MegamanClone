@@ -98,7 +98,21 @@ public class Player : KinematicBody2D
 
     void ActionInputCheck()
     {
+        Timer atkCooldownTimer = (Timer)GetNode("timers/atk_cooldown");
 
+        if (atkCooldownTimer.IsStopped()) {
+			canFire = true;
+		}
+
+        if (Input.IsActionPressed("fire")  && facingRight == true && canFire == true) {
+            System.Diagnostics.Debug.WriteLine("BOOM! Right");
+            canFire = false;
+            atkCooldownTimer.Start();
+        } else if (Input.IsActionPressed("fire")  && facingRight == false && canFire == true) {
+            System.Diagnostics.Debug.WriteLine("BOOM! Left");
+            canFire = false;
+            atkCooldownTimer.Start();
+        }
     }
 
     void UpdateAnimation()

@@ -96,10 +96,14 @@ shape = SubResource( 1 )
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
 frames = SubResource( 14 )
 animation = "runRight"
-frame = 3
 speed_scale = 2.0
 playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 current = true
 zoom = Vector2( 0.4, 0.4 )
+
+[node name="timers" type="Node" parent="."]
+
+[node name="atk_cooldown" type="Timer" parent="timers"]
+one_shot = true
