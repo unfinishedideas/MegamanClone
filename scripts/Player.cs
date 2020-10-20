@@ -6,21 +6,21 @@ public class Player : KinematicBody2D
     // System.Diagnostics.Debug.WriteLine("this is a console log");
 
     // speed variables
-    public const float topSpeed = 150.0f;
-    public const float accel = 30.0f;
-    public const float deccel = 40.0f;
+    [Export] public float topSpeed = 120.0f;
+    [Export] public float accel = 25.0f;
+    [Export] public float deccel = 40.0f;
     public float currentAccel = 0.0f;
     // airtime variables
-    public const float jumpForce = 250.0f;
-    public const float gravity = 700.0f;
-    public const float maxFallSpeed = 4000.0f;
+    [Export] public float jumpForce = 220.0f;
+    [Export] public float gravity = 700.0f;
+    [Export] public float maxFallSpeed = 4000.0f;
     public const bool isOnFloor = true;
     // animation variables
     public bool facingRight = true;
     // attacking variables
     public bool canFire = true;
     // misc variables
-    public float muzzleDistanceAmt = 15f;
+    [Export] public float muzzleDistanceAmt = 15f;
 
 
     Vector2 velocity;
