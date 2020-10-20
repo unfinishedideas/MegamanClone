@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/MegaLeft.png-be632b184393ae313b94732b2f4d918a.stex"
+path="res://.import/brick1.png-f7548fa138dd3fa8911cefae9397ec04.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/MegaLeft.png"
-dest_files=[ "res://.import/MegaLeft.png-be632b184393ae313b94732b2f4d918a.stex" ]
+source_file="res://assets/brick1.png"
+dest_files=[ "res://.import/brick1.png-f7548fa138dd3fa8911cefae9397ec04.stex" ]
 
 [params]
 
