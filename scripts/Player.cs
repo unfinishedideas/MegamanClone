@@ -19,6 +19,8 @@ public class Player : KinematicBody2D
     public bool facingRight = true;
     // attacking variables
     public bool canFire = true;
+    // misc variables
+    public float muzzleDistanceAmt = 15f;
 
 
     Vector2 velocity;
@@ -56,6 +58,9 @@ public class Player : KinematicBody2D
 			if (!facingRight) {
 				velocity.x = 0;
 				facingRight = true;
+                muzzleDistanceAmt = Math.Abs(muzzleDistanceAmt);
+                Position2D muzzleSpot = (Position2D)GetNode("Muzzle");
+                muzzleSpot.Position = new Vector2(muzzleDistanceAmt, 0);
 			}
 			
 			currentAccel = accel; // eventually write function that adds curve instead of just assigning?
@@ -67,6 +72,9 @@ public class Player : KinematicBody2D
 			if (facingRight) {
 				velocity.x = 0;
 				facingRight = false;
+                muzzleDistanceAmt *= -1;
+                Position2D muzzleSpot = (Position2D)GetNode("Muzzle");
+                muzzleSpot.Position = new Vector2(muzzleDistanceAmt, 0);
 			}
 			
 			currentAccel = accel; // eventually write function that adds curve instead of just assigning?
